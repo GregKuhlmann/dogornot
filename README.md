@@ -1,5 +1,7 @@
 # Head-to-head Dog Breeds
 
+Uses ELO scoring and Flask. Coding project with my daughter.
+
 ## Install
 
 * Download image dataset: http://vision.stanford.edu/aditya86/ImageNetDogs/
@@ -7,4 +9,4 @@
 * `pip install flask elo`
 * `python application.py`
 * Point browser to http://localhost:5000
-# dogornot
+
