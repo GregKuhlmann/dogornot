@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Index</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Oswald">
+    <style>
+      body {
+        font-family: 'Oswald', serif;
+        font-size: 16px;
+        background-size: 100%;
+      }
+      img {
+        border-radius: 20px;
+      }
+    </style>
+</head>
+<body bgcolor="#99ffcc" background="static/bg-paw-print.png">
+  <table>
+    <tr>
+      <td><a href="/left"><img src="{{ dog_image1 }}" width="350px;" alt="Dog Image 1" title="{{ dog_breed1 }}"></a>
+      </td>
+      <td><a href="/right"><img src="{{ dog_image2 }}" width="350px;" alt="Dog Image 2" title="{{ dog_breed2 }}"></a>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2" align="center"><font size="18px"><a href="/neither">Neither</a></font></td>
+      </tr>
+    <tr>
+      <td>
+	<h2><a href="/rank">Top Ten</a></h2>
+	<ol>
+      {% for score, breed in top_dogs %}
+      <li>{{ breed }}:{{ score|round|int }}</li>
+      {% endfor %}
+      </ol></td>
+      <td>
+	<h2><a href="/rank">Bottom Ten</a></h2>
+	<ol>
+      {% for score, breed in bottom_dogs %}
+      <li>{{ breed }}: {{ score|round|int }}</li>
+      {% endfor %}
+      </ol></td>
+    </tr>
+  </table>
+</body>
+</html>

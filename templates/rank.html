@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+  <table>
+    {% for score, breed, pic1, pic2, pic3 in dogs %}
+    <tr>
+      <td>{{ breed }}</td>
+      <td>{{ score }}</td>
+      <td><img src="{{ pic1 }}" width="200px;" /></td>
+      <td><img src="{{ pic2 }}" width="200px;" /></td>
+      <td><img src="{{ pic3 }}" width="200px;" /></td>
+    </tr>
+    {% endfor %}
+  </table>
+</body>
+</html>
